@@ -1,13 +1,12 @@
 var express = require('express')
+var bodyParser = require('body-parser')
 var app = express()
-app.get('/home', function(req,res){
-  res.end('Hello World!')
-})
+
+app.use(require('stylus').middleware(process.argv[3]));
+app.use(express.static(process.argv[3]));
+
+
+
+
 app.listen(process.argv[2])
-
-
-
-app.set('views', path.join(__dirname,'templates')
-
-
-app.use(express.static(process.argv[3] || path.join(__dirname,"public")))
+app.listen(process.argv[3])
