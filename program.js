@@ -89,7 +89,34 @@
 // console.log(food['types']);
 
 //Example 16
-function eat(food){
-  return food + ' tasted really good.'
-}
-console.log(eat('bananas'));
+// function eat(food){
+//   return food + ' tasted really good.'
+// }
+// console.log(eat('bananas'));
+
+//Example17
+// function math(a,b,c){
+//   return b * c + a
+// }
+// console.log(math(53,61,67));
+
+//Example 18
+var a = 1, b = 2, c = 3;
+
+     (function firstFunction(){
+         var b = 5, c = 6;
+
+         (function secondFunction(){
+             var b = 8;
+
+             (function thirdFunction(){
+                 var a = 7, c = 9;
+
+                 (function fourthFunction(){
+                     var a = 1, c = 8;
+
+                 })();
+             })();
+         })();
+     })();
+console.log("a: "+a+", b: "+c+",c: "+c);
